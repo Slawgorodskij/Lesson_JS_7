@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <button data-id="1" data-value="btn1">Кнопка 1</button>
     <button data-id="2" data-value="btn2">Кнопка 2</button>
     <button data-id="3" data-value="btn3">Кнопка 3</button>
@@ -20,7 +20,14 @@
     -->
 
     <script>
-        
+      'use strict';
+      let btn = document.querySelectorAll('button');
+      btn.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          console.log(btn.dataset.id);
+          console.log(btn.dataset.value);
+        });
+      });
     </script>
-</body>
+  </body>
 </html>
